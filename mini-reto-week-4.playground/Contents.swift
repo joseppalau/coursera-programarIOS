@@ -85,11 +85,10 @@ class Auto {
 
 var auto = Auto(velocidad: .init())
 
-var estadoAuto = auto.cambioDeVelocidad()
 
     for i in 0...19 {
 
-        estadoAuto = auto.cambioDeVelocidad()
+        let estadoAuto = auto.cambioDeVelocidad()
         print("\(estadoAuto.actual) km/h, \(estadoAuto.velocidadEnCadena)")
         
 }
