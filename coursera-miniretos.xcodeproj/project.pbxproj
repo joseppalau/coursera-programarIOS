@@ -22,6 +22,7 @@
 		836A73A51F4F479100D2CFF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		836A73A81F4F479100D2CFF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		836A73AA1F4F479100D2CFF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		836A73B01F4F47A800D2CFF1 /* mini-reto-week-4.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "mini-reto-week-4.playground"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +39,7 @@
 		836A73921F4F479100D2CFF1 = {
 			isa = PBXGroup;
 			children = (
+				836A73B01F4F47A800D2CFF1 /* mini-reto-week-4.playground */,
 				836A739D1F4F479100D2CFF1 /* coursera-miniretos */,
 				836A739C1F4F479100D2CFF1 /* Products */,
 			);
