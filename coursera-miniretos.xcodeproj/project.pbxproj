@@ -15,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		835B73F41F4FFDA80075F0F3 /* reto-week2.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "reto-week2.playground"; sourceTree = "<group>"; };
 		836A739B1F4F479100D2CFF1 /* coursera-miniretos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "coursera-miniretos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		836A739E1F4F479100D2CFF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		836A73A01F4F479100D2CFF1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -39,6 +40,7 @@
 		836A73921F4F479100D2CFF1 = {
 			isa = PBXGroup;
 			children = (
+				835B73F41F4FFDA80075F0F3 /* reto-week2.playground */,
 				836A73B01F4F47A800D2CFF1 /* mini-reto-week-4.playground */,
 				836A739D1F4F479100D2CFF1 /* coursera-miniretos */,
 				836A739C1F4F479100D2CFF1 /* Products */,
@@ -306,6 +308,7 @@
 				836A73AF1F4F479100D2CFF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
