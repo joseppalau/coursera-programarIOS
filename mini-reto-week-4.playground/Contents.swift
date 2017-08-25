@@ -1,4 +1,4 @@
-//: Playground - noun: a place where people can play
+//: Playground - Mini Reto Week 4
 
 import UIKit
 
@@ -8,90 +8,71 @@ enum Velocidades: Int {
     case VelocidadMedia = 50
     case VelocidadAlta = 120
     
-    init() {
-        self = .Apagado
+    init(velocidadInicial: Velocidades) {
+        self = velocidadInicial
     }
 }
 
 
 class Auto {
     
-    var velocidadInicial = Velocidades()
-    var velocidadAnterior: Velocidades?
-    var valorVelocidad = 0
-    var estadoAuto = ""
+    var velocidad: Velocidades
     
-    init(velocidad: Velocidades) {
-        self.velocidadInicial = velocidad
+    init() {
+        
+        velocidad = Velocidades(velocidadInicial: Velocidades.Apagado)
+        
     }
     
     func cambioDeVelocidad() -> (actual: Int, velocidadEnCadena:String) {
         
-        if velocidadInicial == .Apagado {
-            valorVelocidad = velocidadInicial.rawValue
+        var valorVelocidad : Int = 0
+        var estadoAuto : String = ""
+        
+        
+        if  velocidad == .Apagado {
+            
+            valorVelocidad = velocidad.rawValue
             estadoAuto = "Apagado"
-            velocidadInicial = .VelocidadBaja
-            velocidadAnterior = .Apagado
+            velocidad = .VelocidadBaja
             
         }
             
-        else if velocidadInicial == .VelocidadBaja {
+        else if velocidad == .VelocidadBaja {
             
-            if velocidadAnterior == .VelocidadMedia {
-                valorVelocidad = velocidadInicial.rawValue
-                estadoAuto = "Velocidad Baja"
-                velocidadInicial = .Apagado
-                velocidadAnterior = .VelocidadBaja
-            }
-                
-            else {
-                valorVelocidad = velocidadInicial.rawValue
-                estadoAuto = "Velocidad Baja"
-                velocidadInicial = .VelocidadMedia
-                velocidadAnterior = .VelocidadBaja
-            }
+            valorVelocidad = velocidad.rawValue
+            estadoAuto = "Velocidad Baja"
+            velocidad = .VelocidadMedia
         }
             
-        else if velocidadInicial == .VelocidadMedia  {
+        else if velocidad == .VelocidadMedia  {
             
-            if  velocidadAnterior == .VelocidadAlta {
-                valorVelocidad = velocidadInicial.rawValue
-                estadoAuto = "Velocidad Media"
-                velocidadInicial = .VelocidadBaja
-                velocidadAnterior = .VelocidadMedia
-            }
-                
-            else {
-                valorVelocidad = velocidadInicial.rawValue
-                estadoAuto = "Velocidad Media"
-                velocidadInicial = .VelocidadAlta
-                velocidadAnterior = .VelocidadMedia
-            }
+            valorVelocidad = velocidad.rawValue
+            estadoAuto = "Velocidad Media"
+            velocidad = .VelocidadAlta
             
         }
             
-        else if velocidadInicial == .VelocidadAlta {
-            valorVelocidad = velocidadInicial.rawValue
+        else if velocidad == .VelocidadAlta {
+            
+            valorVelocidad = velocidad.rawValue
             estadoAuto = "Velocidad Alta"
-            velocidadInicial = .VelocidadMedia
-            velocidadAnterior = .VelocidadAlta
+            velocidad = .VelocidadMedia
+            
         }
         
         let tuplaAuto = (valorVelocidad, estadoAuto)
-        return tuplaAuto
+        return (tuplaAuto)
+        
     }
     
 }
 
-var auto = Auto(velocidad: .init())
+var auto = Auto()
 
-
-    for i in 0...19 {
-
-        let estadoAuto = auto.cambioDeVelocidad()
-        print("\(estadoAuto.actual) km/h, \(estadoAuto.velocidadEnCadena)")
-        
+for i in 0...19 {
+    
+    let estadoAuto = auto.cambioDeVelocidad()
+    print("\(estadoAuto.actual) km/h, \(estadoAuto.velocidadEnCadena)")
+    
 }
-
-
-
