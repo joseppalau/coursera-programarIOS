@@ -62,7 +62,7 @@ class Auto {
         }
         
         let tuplaAuto = (valorVelocidad, estadoAuto)
-        return (tuplaAuto)
+        return tuplaAuto
         
     }
     
